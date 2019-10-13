@@ -12,14 +12,14 @@ repositories {
 }
 
 
-// Project dependencies, set antlr 4.7.1
+// Project dependencies, set antlr 4.7.1, and junit is for java 12.
 dependencies {
     antlr "org.antlr:antlr4:4.7.1"
     compile "org.antlr:antlr4-runtime:4.7.1"
     testCompile 'junit:junit:4.12'
 }
 
-//Task to generate source code from antlr grammars, and package them in the mylanguage package.
+//Task to generate source code with visitors from antlr grammars, and package them in the mylanguage package.
 generateGrammarSource {
     maxHeapSize = "64m"
     arguments += ['-visitor','-package', 'mylanguage']
@@ -37,9 +37,12 @@ sourceSets {
 compileGeneratedJava.source sourceSets.generated.java
 compileJava.source sourceSets.generated.java, sourceSets.main.java
 
+//Task to remove the generated files.
 clean{
     delete "generated-src"
 }
+
+//Task to create the IDEA project files, with the generated files.
 idea {
     module {
         sourceDirs += file("generated-src/antlr/main")
