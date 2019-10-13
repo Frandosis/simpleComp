@@ -1,5 +1,5 @@
 # Antlr project for IntelliJ IDEA
-This project is made for 02332-Compilerteknik to make it easier to work with Antlr in group work
+This project is made for 02332-Compilerteknik to make it easier to work with Antlr in group work.
 This project uses Gradle to build the whole project by generating the Antlr sources and linking it to your main.java project folder
 ## How to use
 You first clone this project into Intellij, then under src/main/java you put your main source files.
