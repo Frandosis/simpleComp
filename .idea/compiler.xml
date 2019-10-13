@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="simpleComp.generated" target="12" />
+      <module name="simpleComp.src" target="12" />
     </bytecodeTargetLevel>
   </component>
 </project>
