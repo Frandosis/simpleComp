@@ -37,5 +37,6 @@ clean{
 idea {
     module {
         sourceDirs += file("generated-src/antlr/main")
+        sourceDirs += file("src/main/java")
     }
 }
